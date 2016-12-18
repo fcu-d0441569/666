@@ -1,29 +1,60 @@
 
 public class Search {
-	String[] sourse = {"ª«¥ó¾É¦V"};
-	String[] sourse1 = {"Åé¨|"};
-	String[] sourse2 = {"³n¤u¾É½×"};
-	String[] sourse3 = {"¸ê®Æµ²ºc"};
-	String[] sourse4 = {"ÅÊ·R¤ß²z¾Ç"};
-	String[] course1 = {"¾Ç¥Í¤H¼Æ:1","¾Ç¥Íµû»ù:¤W"};
-	String[] course2 = {"¾Ç¥Í¤H¼Æ:2","¾Ç¥Íµû»ù:¤¤"};
-	String[] course3 = {"¾Ç¥Í¤H¼Æ:3","¾Ç¥Íµû»ù:¤U"};
-	String[] course4 = {"¾Ç¥Í¤H¼Æ:4","¾Ç¥Íµû»ù:¤¤¤W"};
-	String[] course5 = {"¾Ç¥Í¤H¼Æ:5","¾Ç¥Íµû»ù:¤¤¤U"};
-	Teacher T1 = new Teacher("½²©÷»Ê",sourse,"²¦·~©ó³{¥Ò¤j¾Ç");
-	Teacher T2 = new Teacher("°ªºû§¡",sourse1,"²¦·~©ó³{¥Ò¤j¾Ç");
-	Teacher T3 = new Teacher("³¯¬fµ¾",sourse2,"²¦·~©ó³{¥Ò¤j¾Ç");
-	Teacher T4 = new Teacher("¼B«T¨j",sourse3,"²¦·~©ó³{¥Ò¤j¾Ç");
-	Teacher T5 = new Teacher("¤ı§e®m",sourse4,"²¦·~©ó³{¥Ò¤j¾Ç");
+	String[] sourse = {"ç‰©ä»¶å°å‘"};
+	String[] sourse1 = {"é«”è‚²"};
+	String[] sourse2 = {"è»Ÿå·¥å°è«–"};
+	String[] sourse3 = {"è³‡æ–™çµæ§‹"};
+	String[] sourse4 = {"æˆ€æ„›å¿ƒç†å­¸"};
+	String[] course1 = {"å­¸ç”Ÿäººæ•¸:1","å­¸ç”Ÿè©•åƒ¹:ä¸Š"};
+	String[] course2 = {"å­¸ç”Ÿäººæ•¸:2","å­¸ç”Ÿè©•åƒ¹:ä¸­"};
+	String[] course3 = {"å­¸ç”Ÿäººæ•¸:3","å­¸ç”Ÿè©•åƒ¹:ä¸‹"};
+	String[] course4 = {"å­¸ç”Ÿäººæ•¸:4","å­¸ç”Ÿè©•åƒ¹:ä¸­ä¸Š"};
+	String[] course5 = {"å­¸ç”Ÿäººæ•¸:5","å­¸ç”Ÿè©•åƒ¹:ä¸­ä¸‹"};
 	
-	Course C1 = new Course("ª«¥ó¾É¦V", course1, "½²©÷»Ê");
-	Course C2 = new Course("Åé¨|", course2, "°ªºû§¡");
-	Course C3 = new Course("³n¤u¾É½×", course3, "³¯¬fµ¾");
-	Course C4 = new Course("¸ê®Æµ²ºc", course4, "¼B«T¨j");
-	Course C5 = new Course("ÅÊ·R¤ß²z¾Ç", course5,"¤ı§e®m");
-	
-	public class search{
-		
-		
+	Teacher [] T = new Teacher[5];{
+	T[0] = new Teacher("è”¡æ˜ŒéŠ˜",sourse,"ç•¢æ¥­æ–¼é€¢ç”²å¤§å­¸");
+	T[1] = new Teacher("é«˜ç¶­å‡",sourse1,"ç•¢æ¥­æ–¼é€¢ç”²å¤§å­¸");
+	T[2] = new Teacher("é™³æŸç¿”",sourse2,"ç•¢æ¥­æ–¼é€¢ç”²å¤§å­¸");
+	T[3] = new Teacher("åŠ‰ä¿Šç”«",sourse3,"ç•¢æ¥­æ–¼é€¢ç”²å¤§å­¸");
+	T[4] = new Teacher("ç‹å‘ˆå³»",sourse4,"ç•¢æ¥­æ–¼é€¢ç”²å¤§å­¸");
 	}
-}
+	Course [] C = new Course[5];{
+	C[0] = new Course("ç‰©ä»¶å°å‘","9487", course1, "è”¡æ˜ŒéŠ˜");
+	C[1] = new Course("é«”è‚²","9478", course2, "é«˜ç¶­å‡");
+	C[2] = new Course("è»Ÿå·¥å°è«–","9477", course3, "é™³æŸç¿”");
+	C[3] = new Course("è³‡æ–™çµæ§‹","9488", course4, "åŠ‰ä¿Šç”«");
+	C[4] = new Course("æˆ€æ„›å¿ƒç†å­¸","9466", course5,"ç‹å‘ˆå³»");
+	}
+	
+	public  void search(String str){//*æœå°‹
+			boolean found = false;
+			int i,a;
+			for(i = 0;i < T.length;i++){//*ä½¿ç”¨èª²ç¨‹ä»£ç¢¼æœå°‹
+				if(str.equals(T[i].teacherName)){
+					found = true;
+					System.out.print(T[i].teacherName+','+T[i].teacherData+',');
+					for(String e : T[i].courseName){
+			            System.out.println(e+"\t");
+			        }
+					break;
+				}else if(str.equals(C[i].courseCode)){//*ä½¿ç”¨èª²ç¨‹åç¨±æœå°‹
+					found = true;
+					System.out.print(C[i].teacherName+','+C[i].courseName+',');
+					for(String e : C[i].courseData){
+			            System.out.println(e+"\t");
+			        }
+					break;
+				}else if(str.equals(C[i].courseName)){//*æœå°‹ä¸åˆ°çµæœæ™‚
+					found = true;
+					System.out.print(C[i].teacherName+','+C[i].courseCode+',');
+					for(String e : C[i].courseData){
+			            System.out.println(e+"\t");
+			        }
+					break;
+				}
+			}
+			if(found == false){//*æœå°‹ä¸åˆ°çµæœæ™‚
+			System.out.println("ï¿½Sï¿½ï¿½ï¿½jï¿½Mï¿½ï¿½ï¿½G!ï¿½Ğ­ï¿½ï¿½sï¿½ï¿½J");
+			}
+		}
+	}
