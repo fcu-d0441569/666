@@ -54,7 +54,7 @@ public class Search {
 				}
 			}
 			if(found == false){//*搜尋不到結果時
-			System.out.println("�S���j�M���G!�Э��s��J");
+			System.out.println("沒有搜尋結果!請重新輸入:");
 			}
 		}
 	}
