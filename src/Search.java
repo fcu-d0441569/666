@@ -5,11 +5,11 @@ public class Search {
 	String[] sourse2 = {"軟工導論"};
 	String[] sourse3 = {"資料結構"};
 	String[] sourse4 = {"戀愛心理學"};
-	String[] course1 = {"學生人數:1","學生評價:上"};
-	String[] course2 = {"學生人數:2","學生評價:中"};
-	String[] course3 = {"學生人數:3","學生評價:下"};
-	String[] course4 = {"學生人數:4","學生評價:中上"};
-	String[] course5 = {"學生人數:5","學生評價:中下"};
+	String[] course1 = {"評價人數:1","學生評價:上"};
+	String[] course2 = {"評價人數:2","學生評價:中"};
+	String[] course3 = {"評價人數:3","學生評價:下"};
+	String[] course4 = {"評價人數:4","學生評價:中上"};
+	String[] course5 = {"評價人數:5","學生評價:中下"};
 	
 	Teacher [] T = new Teacher[5];{
 	T[0] = new Teacher("蔡昌銘",sourse,"畢業於逢甲大學");
